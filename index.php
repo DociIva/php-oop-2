@@ -21,19 +21,21 @@ require_once __DIR__ .'/classes/Employee.php';
 
     <main>
         <section>
+            <h2>Utente : </h2>
             <?php // Istanza utente
                 $user1 = new User('Riccardo', 'Verdi', 66);
             ?>
             <h2><?php echo $user1->getFullName(); ?></h2>
-
-            <div>Cuccia con lo sconto : <?php echo $user1->getSale(); ?>%</div>
+            <h3><?php echo $user1->getAge(); ?></h3>
         </section>
 
         <section>
+            <h2>Cuccia : </h2>
             <?php // Istanza employee
-                $employ1 = new Employee('Francesco', 'Gialli', 25, 5);
+                $employ1 = new Employee('Ferplast','Baita da Esterno ', 55);
             ?>
             <h2><?php echo $employ1->getFullName(); ?></h2>
+            <h2><?php echo $employ1->getPrezzo(); ?></h2>
 
             <div>Cuccia con lo sconto : <?php echo $employ1->getSale(); ?>%</div>
         </section>

@@ -6,23 +6,23 @@ require_once __DIR__ . '/User.php';
  */
 class Employee extends User {
     // Propietà
-    private $level;
 
+    protected $prezzo;
+    
+    
+      
     // Costruttore
-    function __construct($_name, $_lastName, $_age, $_level = 1) {
-        parent::__construct($_name, $_lastName, $_age);
+    public function __construct($_name, $_lastName, $_age, $_prezzo = '85$')  {
+        parent::__construct($_name, $_lastName, $_age, $_prezzo, );
         
-        $this->level = $_level;
+        $this->prezzo = $_prezzo;
+        
     }
-    // Metdoi
-    protected function calcSconto() {
-        if($this->age > 60) {
-            $this->sale = 30;
-        }elseif($this->level > 3){
-            $this->sale = 20;
-        }else {
-            $this->sale = 0 ;
-        }
+
+    // Metodi
+    public function getPrezzo() {
+        return $this->prezzo; 
     }
+
 }
  

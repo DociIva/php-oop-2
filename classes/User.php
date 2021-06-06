@@ -10,6 +10,7 @@ class User {
     protected $lastName;
     protected $age;
     protected $sale;
+    protected $levelPremium;
 
     // Costruttore
     public function __construct($_name, $_lastName, $_age) {
@@ -32,5 +33,8 @@ class User {
       $this->calcSconto();
 
       return $this->sale;
+    }
+    public function getAge() {
+        return $this->age;
     }
 }
